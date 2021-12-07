@@ -1,0 +1,45 @@
+@media (max-width: 959.95px) {
+	.jss6 {
+		justify-content: flex-end;
+	}
+}
+@media (min-width: 600px) {
+	.jss3 {
+		padding-top: 16px;
+	}
+}
+
+.jss7 {
+	height: 85vh;
+	padding: 16px;
+	background-color: #0035f0;
+}
+.jss8 {
+	margin-top: 0.5rem;
+	text-decoration: none;
+}
+.jss10 {
+	font-weight: 600;
+}
+@media (min-width: 600px) {
+	.MuiTypography-h6 {
+		font-size: 1.25rem;
+	}
+}
+.vd5 {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.vd6 {
+	text-decoration: none;
+}
+.vd7 {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.vd9 {
+	font-size: 1rem;
+	font-weight: 600;
+}
