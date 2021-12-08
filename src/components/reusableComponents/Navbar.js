@@ -9,8 +9,10 @@ import {
 	Box,
 	Button,
 } from '@material-ui/core';
+import TitleText from '../TitleText';
 import '../../components/Navbar.css';
 import Logo from '../../assets/images/logo.svg';
+import { useHistory } from 'react-router';
 const useStyles = makeStyles((theme) => ({
 	container: {
 		height: '15vh',
@@ -48,8 +50,10 @@ const useStyles = makeStyles((theme) => ({
 		textDecoration: 'none',
 	},
 	vd7: {
-		fontSize: '1rem',
-		fontWeight: 600,
+		background:
+			'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
+		webkitBackgroundClip: 'text',
+		WebkitTextFillColor: 'transparent',
 	},
 	vd9: {
 		fontSize: '1rem',
@@ -62,14 +66,15 @@ const useStyles = makeStyles((theme) => ({
 		padding: '12px',
 		borderRadius: '10px',
 	},
-	vd7: {
-		fontSize: '1rem',
-		fontWeight: 600,
-	},
+	// vd7: {
+	// 	fontSize: '1rem',
+	// 	fontWeight: 600,
+	// },
 }));
 
-const Navbar = () => {
+const Navbar = ({ active }) => {
 	const classes = useStyles();
+	const history = useHistory();
 	return (
 		<>
 			<Grid style={{ backgroundColor: 'white' }}>
@@ -109,86 +114,104 @@ const Navbar = () => {
 						<Grid className={classes.vd5} style={{ width: '80%' }}>
 							<Grid item>
 								<NavLink to='/' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' rgb(0, 53, 240)',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+									<TitleText
+										two
+										textStyle={{
+											color: active == 1 ? '' : '#111341',
+											background:
+												active == 1
+													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+													: '',
+											webkitBackgroundClip: active == 1 ? 'text' : '',
+											WebkitTextFillColor: active == 1 ? 'transparent' : '',
+										}}>
 										Home
-									</Typography>
+									</TitleText>
 								</NavLink>
 							</Grid>
 							<Grid item>
-								<NavLink to='/services' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' black',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+								<NavLink to='/product' className={classes.vd6}>
+									<TitleText
+										two
+										textStyle={{
+											color: active == 2 ? '' : '#111341',
+											background:
+												active == 2
+													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+													: '',
+											webkitBackgroundClip: active == 2 ? 'text' : '',
+											WebkitTextFillColor: active == 2 ? 'transparent' : '',
+										}}>
 										Product
-									</Typography>
+									</TitleText>
 								</NavLink>
 							</Grid>
 							<Grid item>
 								<NavLink to='/project' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' black',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+									<TitleText
+										two
+										textStyle={{
+											color: active == 3 ? '' : '#111341',
+											background:
+												active == 3
+													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+													: '',
+											webkitBackgroundClip: active == 3 ? 'text' : '',
+											WebkitTextFillColor: active == 3 ? 'transparent' : '',
+										}}>
 										Solution
-									</Typography>
+									</TitleText>
 								</NavLink>
 							</Grid>
 							<Grid item>
-								<a href='#' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' black',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+								<NavLink to='/about' className={classes.vd6}>
+									<TitleText
+										two
+										textStyle={{
+											color: active == 4 ? '' : '#111341',
+											background:
+												active == 4
+													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+													: '',
+											webkitBackgroundClip: active == 4 ? 'text' : '',
+											WebkitTextFillColor: active == 4 ? 'transparent' : '',
+										}}>
 										Company
-									</Typography>
-								</a>
+									</TitleText>
+								</NavLink>
 							</Grid>
 							<Grid item>
-								<NavLink to='/company' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' black',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+								<NavLink to='/publication' className={classes.vd6}>
+									<TitleText
+										two
+										textStyle={{
+											color: active == 5 ? '' : '#111341',
+											background:
+												active == 5
+													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+													: '',
+											webkitBackgroundClip: active == 5 ? 'text' : '',
+											WebkitTextFillColor: active == 5 ? 'transparent' : '',
+										}}>
 										Publication
-									</Typography>
+									</TitleText>
 								</NavLink>
 							</Grid>
 							<Grid item>
 								<NavLink to='/company' className={classes.vd6}>
-									<Typography
-										variant='h6'
-										style={{
-											color: ' black',
-											fontSize: '1rem',
-											fontFamily: 'Mulish, Roboto, sans-serif',
-										}}
-										className={classes.vd7}>
+									<TitleText
+										two
+										textStyle={{
+											color: '#111341',
+											// background:
+											// 	active == 6
+											// 		? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+											// 		: '',
+											// webkitBackgroundClip: active == 6 ? 'text' : '',
+											// WebkitTextFillColor: active == 6 ? 'transparent' : '',
+										}}>
 										Contact Us
-									</Typography>
+									</TitleText>
 								</NavLink>
 							</Grid>
 							<Grid item>

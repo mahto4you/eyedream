@@ -111,7 +111,15 @@ const Footer = () => {
 					className={classes.ft3}
 					style={{ marginTop: 48 }}>
 					<Grid item xs={12} sm={4} md={4} lg={4} className={classes.ft4}>
-						<TitleText>About Us</TitleText>
+						<TitleText
+							textStyle={{
+								background:
+									'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
+								webkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}>
+							About Us
+						</TitleText>
 
 						<BodyText textStyle={{ marginTop: 10 }}>Careers</BodyText>
 						<BodyText textStyle={{ marginTop: 5 }}>
@@ -123,7 +131,15 @@ const Footer = () => {
 						<BodyText textStyle={{ marginTop: 5 }}>Relations</BodyText>
 					</Grid>
 					<Grid item xs={12} sm={4} md={4} lg={4} className={classes.ft6}>
-						<TitleText>Partner</TitleText>
+						<TitleText
+							textStyle={{
+								background:
+									'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
+								webkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}>
+							Partner
+						</TitleText>
 
 						<BodyText textStyle={{ marginTop: 10 }}>ProgramStrategic</BodyText>
 						<BodyText textStyle={{ marginTop: 5 }}>Alliances</BodyText>
@@ -134,7 +150,15 @@ const Footer = () => {
 						<BodyText textStyle={{ marginTop: 5 }}>Partner Sign In</BodyText>
 					</Grid>
 					<Grid item xs={12} sm={4} md={4} lg={4} className={classes.ft6}>
-						<TitleText>Our Compliance</TitleText>
+						<TitleText
+							textStyle={{
+								background:
+									'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
+								webkitBackgroundClip: 'text',
+								WebkitTextFillColor: 'transparent',
+							}}>
+							Our Compliance
+						</TitleText>
 						<BodyText textStyle={{ marginTop: 10 }}>Case Studies</BodyText>
 						<BodyText textStyle={{ marginTop: 5 }}>
 							PromotionsManufacturing
