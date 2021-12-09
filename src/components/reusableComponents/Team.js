@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Grid, Typography, Hidden, Paper, makeStyles } from '@material-ui/core';
 // import { useStyles } from './styles/blog';
 import SwipeableViews from 'react-swipeable-views';
-import BlogProductCard from '../reusableComponents/BlogProductCard';
+import TeamCard from '../reusableComponents/TeamCard';
 import BlogImg from '../../assets/images/BlogImage.svg';
 import LeftArrowIcon from '../../assets/images/LeftArrowIcon.svg';
 import RightArrowBlueIcon from '../../assets/images/RightArrowBlueIcon.svg';
+import BodyText from '../BodyText';
 const useStyles = makeStyles((theme) => ({
 	bc1: {
 		margin: '10px',
@@ -88,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-const BlogProduct = () => {
+const Team = () => {
 	const [val, setVal] = useState({
 		index: 0,
 	});
@@ -102,14 +103,13 @@ const BlogProduct = () => {
 		if (id < 0 && val.index > 0) {
 			setVal({ index: val.index - 1 });
 		} else if (id > 0 && val.index >= 0) {
-			if (val.index == 2) {
+			if (val.index == 3) {
 				setVal({ index: 0 });
 			} else {
 				setVal({ index: val.index + 1 });
 			}
 		}
 	};
-
 	console.log(val);
 	return (
 		<>
@@ -130,7 +130,7 @@ const BlogProduct = () => {
 								Blogs
 							</Typography>
 						</Grid> */}
-						<Grid className={classes.b3}>
+						<Grid className={classes.b3} style={{ width: '50%' }}>
 							<Typography
 								variant='h3'
 								style={{
@@ -138,8 +138,13 @@ const BlogProduct = () => {
 									fontSize: '1.5rem',
 									fontFamily: 'Mulish, Roboto, sans-serif',
 								}}>
-								Latest Publications
+								Our Teams
 							</Typography>
+							<BodyText>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Curabitur enim egestas facilisis massa et pulvinar elit volutpat
+								tristique.{' '}
+							</BodyText>
 						</Grid>
 					</Grid>
 					<Hidden only={['lg', 'md', 'xl']}>
@@ -172,31 +177,31 @@ const BlogProduct = () => {
 				<Hidden only={['lg', 'md', 'xl']}>
 					<Grid className='b10'>
 						<SwipeableViews id='sDiv' index={val.index}>
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
-							<BlogProductCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
+							<TeamCard src={BlogImg} />
 
-							{/* <BlogProductCard src={scaled2} />
+							{/* <TeamCard src={scaled2} />
 
-							<BlogProductCard src={handsun} />
+							<TeamCard src={handsun} />
 
-							<BlogProductCard src={Whats} />
+							<TeamCard src={Whats} />
 
-							<BlogProductCard src={Group} />
+							<TeamCard src={Group} />
 
-							<BlogProductCard src={WhatsAppImage} />
+							<TeamCard src={WhatsAppImage} />
 
-							<BlogProductCard src={supply} />
+							<TeamCard src={supply} />
 
-							<BlogProductCard src={WhatsAp} />
+							<TeamCard src={WhatsAp} />
 
-							<BlogProductCard src={SEO} />
+							<TeamCard src={SEO} />
 
-							<BlogProductCard src={undraw_search} /> */}
+							<TeamCard src={undraw_search} /> */}
 						</SwipeableViews>
 					</Grid>
 				</Hidden>
@@ -206,36 +211,55 @@ const BlogProduct = () => {
 						<SwipeableViews id='gDiv' index={val.index} axis='x-reverse'>
 							<Grid className={classes.b6}>
 								<Grid container spacing={4} style={{ margin: '0px' }}>
-									<BlogProductCard src={BlogImg} />
-									<BlogProductCard src={BlogImg} />
+									<TeamCard src={BlogImg} />
+									<TeamCard src={BlogImg} val='true' />
+									<TeamCard src={BlogImg} />
+
 									<Hidden only={['sm', 'md']}>
-										<BlogProductCard src={BlogImg} />
+										<TeamCard src={BlogImg} val='true' />
+									</Hidden>
+									{/* <Hidden only={['sm', 'md']}> */}
+									{/* </Hidden> */}
+								</Grid>
+							</Grid>
+
+							<Grid className={classes.b6}>
+								<Grid container spacing={4} style={{ margin: '0px' }}>
+									<TeamCard src={BlogImg} />
+									<TeamCard src={BlogImg} val='true' />
+									<TeamCard src={BlogImg} />
+
+									<Hidden only={['sm', 'md']}>
+										<TeamCard src={BlogImg} val='true' />
 									</Hidden>
 								</Grid>
 							</Grid>
 
 							<Grid className={classes.b6}>
 								<Grid container spacing={4} style={{ margin: '0px' }}>
-									<BlogProductCard src={BlogImg} />
-									<BlogProductCard src={BlogImg} />
+									<TeamCard src={BlogImg} />
+									<TeamCard src={BlogImg} val='true' />
+									<TeamCard src={BlogImg} />
+
 									<Hidden only={['sm', 'md']}>
-										<BlogProductCard src={BlogImg} />
+										<TeamCard src={BlogImg} val='true' />
 									</Hidden>
 								</Grid>
 							</Grid>
-
 							<Grid className={classes.b6}>
 								<Grid container spacing={4} style={{ margin: '0px' }}>
-									<BlogProductCard src={BlogImg} />
-									<BlogProductCard src={BlogImg} />
+									<TeamCard src={BlogImg} />
+									<TeamCard src={BlogImg} val='true' />
+									<TeamCard src={BlogImg} />
+
 									<Hidden only={['sm', 'md']}>
-										<BlogProductCard src={BlogImg} />
+										<TeamCard src={BlogImg} val='true' />
 									</Hidden>
 								</Grid>
 							</Grid>
 							{/* <Grid className={classes.b6}>
 								<Grid container spacing={3} style={{ margin: '0px' }}>
-									<BlogProductCard src={undraw_search} />
+									<TeamCard src={undraw_search} />
 								</Grid>
 							</Grid> */}
 						</SwipeableViews>
@@ -245,4 +269,4 @@ const BlogProduct = () => {
 		</>
 	);
 };
-export default BlogProduct;
+export default Team;

@@ -95,10 +95,19 @@ const Blog = () => {
 
 	const classes = useStyles();
 	const scrol = (id) => {
-		if (val.index == 3) {
-			setVal({ index: 0 });
+		// if (val.index == 3) {
+		// 	setVal({ index: 0 });
+		// }
+		// setVal({ index: val.index + id });
+		if (id < 0 && val.index > 0) {
+			setVal({ index: val.index - 1 });
+		} else if (id > 0 && val.index >= 0) {
+			if (val.index == 2) {
+				setVal({ index: 0 });
+			} else {
+				setVal({ index: val.index + 1 });
+			}
 		}
-		setVal({ index: val.index + id });
 	};
 	console.log(val);
 	return (
