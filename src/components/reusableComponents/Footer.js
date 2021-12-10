@@ -7,7 +7,13 @@ import twitterIcon from '../../assets/images/twitterIcon.svg';
 import linkdIcon from '../../assets/images/linkdIcon.svg';
 import BodyText from '../BodyText';
 import TitleText from '../TitleText';
-import { Grid, makeStyles, Box } from '@material-ui/core';
+import {
+	Grid,
+	makeStyles,
+	Box,
+	useTheme,
+	useMediaQuery,
+} from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
 	ft3: {
 		marginTop: '10px',
@@ -40,15 +46,20 @@ const useStyles = makeStyles((theme) => ({
 
 const Footer = () => {
 	const classes = useStyles();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	return (
 		<>
 			<Grid
 				container
 				justify='center'
 				className='ft'
-				style={{ marginBottom: 180 }}>
-				<Grid item xs={12} sm={4} md={4} lg={4} className={classes.ft5}>
-					<Grid container className='ft1'>
+				style={{ marginBottom: 180, textAlign: matches ? 'center' : '' }}>
+				<Grid item xs={12} sm={12} md={4} lg={4} className={classes.ft5}>
+					<Grid
+						container
+						className='ft1'
+						style={{ justifyContent: matches ? 'center' : '' }}>
 						<Box display='flex' alignItems='center'>
 							<img src={Logo} alt='vast'></img>
 							<BodyText
@@ -63,19 +74,31 @@ const Footer = () => {
 							</BodyText>
 						</Box>{' '}
 					</Grid>
-					<Grid container style={{ marginBottom: '20px' }}>
+					<Grid
+						container
+						style={{
+							marginBottom: '20px',
+							justifyContent: matches ? 'center' : '',
+						}}>
 						<Box>
 							<BodyText two textStyle={{ color: '#111341', fontWeight: 600 }}>
 								@2021 Eye Dream Pty Ltd All rights reserved.
 							</BodyText>
 						</Box>
 					</Grid>
-					<Grid container style={{ marginBottom: '20px' }}>
+					<Grid
+						container
+						style={{
+							marginBottom: '20px',
+							justifyContent: matches ? 'center' : '',
+						}}>
 						<Box>
 							<TitleText textStyle={{ fontSize: 15 }}>Contact us</TitleText>
 						</Box>
 					</Grid>
-					<Box display='flex' justifyContent='space-between'>
+					<Box
+						display='flex'
+						justifyContent={matches ? 'space-around' : 'space-between'}>
 						<Box display='flex'>
 							<img src={ContactIcon} />
 							<TitleText textStyle={{ fontSize: 14, marginLeft: 12 }}>
@@ -89,7 +112,10 @@ const Footer = () => {
 							</TitleText>
 						</Box>
 					</Box>
-					<Box display='flex' justifyContent='space-between' mt={'30px'}>
+					<Box
+						display='flex'
+						justifyContent={matches ? 'space-around' : 'space-between'}
+						mt={'30px'}>
 						<Box display='flex'>
 							<img src={linkdIcon} />
 							<img src={twitterIcon} style={{ marginLeft: 30 }} />
@@ -105,7 +131,7 @@ const Footer = () => {
 				<Grid
 					container
 					xs={12}
-					sm={6}
+					sm={12}
 					md={6}
 					lg={6}
 					className={classes.ft3}

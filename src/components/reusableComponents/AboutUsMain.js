@@ -7,6 +7,8 @@ import {
 	Box,
 	Button,
 	Divider,
+	useTheme,
+	useMediaQuery,
 	Paper,
 } from '@material-ui/core';
 import TitleText from '../../components/TitleText';
@@ -119,17 +121,27 @@ const AboutUsMain = () => {
 		if (id < 0 && val > 0) {
 			setVal(val - 1);
 		} else if (id > 0 && val >= 0) {
-			setVal(val + 1);
+			if (val == 3) {
+				setVal(0);
+			} else {
+				setVal(val + 1);
+			}
 		}
 	};
 	const scroll2 = (id2) => {
 		if (id2 < 0 && val2 > 0) {
 			setVal2(val2 - 1);
 		} else if (id2 > 0 && val2 >= 0) {
-			setVal2(val2 + 1);
+			if (val2 == 2) {
+				setVal2(0);
+			} else {
+				setVal2(val2 + 1);
+			}
 		}
 	};
 	const classes = useStyles();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('md'));
 	return (
 		<>
 			<Grid
@@ -140,11 +152,12 @@ const AboutUsMain = () => {
 					backgroundPosition: 'center',
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
-					height: 814,
+					height: matches ? 1919 : 814,
 				}}>
 				<Grid
 					item
-					xs={7}
+					xs={12}
+					lg={7}
 					style={{
 						background: `url(${LooperGroup})`,
 						justifyContent: 'center',
@@ -170,23 +183,31 @@ const AboutUsMain = () => {
 							</BodyText>
 						</Box>
 					</Box>
+					{/* <Box>
+						<img src={People}></img>
+					</Box> */}
 				</Grid>
 				<Grid
 					item
-					xs={5}
-					style={{
-						background: `url(${People})`,
-						justifyContent: 'center',
-						backgroundPosition: 'center',
-						backgroundSize: 'cover',
-						backgroundRepeat: 'no-repeat',
-						height: 787,
-					}}></Grid>
+					xs={12}
+					lg={5}
+					// style={{
+					// 	background: `url(${People})`,
+					// 	justifyContent: 'center',
+					// 	backgroundPosition: 'center',
+					// 	backgroundSize: 'cover',
+					// 	backgroundRepeat: 'no-repeat',
+					// 	height: 787,
+					// }}
+				>
+					<img src={People} width='100%'></img>
+				</Grid>
 			</Grid>
 			<Grid container>
 				<Grid
 					item
-					xs={6}
+					xs={12}
+					lg={6}
 					style={{
 						background: `url(${CircleSpiral})`,
 						justifyContent: 'center',
@@ -197,7 +218,7 @@ const AboutUsMain = () => {
 					}}>
 					<Box mt={'80px'} ml={'75px'} style={{ width: '70%' }}>
 						<TitleText textStyle={{ fontSize: 36 }}>About Us</TitleText>
-						<BodyText>
+						<BodyText textStyle={{ fontSize: 18, marginTop: 20 }}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
 							hac felis lectus neque, pellentesque vestibulum ullamcorper lacus,
 							pharetra. Orci nec turpis enim pretium, massa. Sed turpis etiam
@@ -210,7 +231,7 @@ const AboutUsMain = () => {
 						</BodyText>
 					</Box>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} lg={4} style={{ padding: matches ? '30px' : '' }}>
 					<Box mt={'30px'}>
 						<TitleText
 							textStyle={{
@@ -290,7 +311,13 @@ const AboutUsMain = () => {
 							<Paper className={classes.b5} onClick={() => scroll(-1)}>
 								<img src={LeftArrowIcon} alt='left-arrow'></img>
 							</Paper>
-							<Paper className={classes.b5} onClick={() => scroll(+1)}>
+							<Paper
+								className={classes.b5}
+								onClick={() => scroll(+1)}
+								style={{
+									background:
+										'linear-gradient(129.01deg, #4844FF 0%, #C961FA 91.5%)',
+								}}>
 								<img src={RightArrowBlueIcon} alt='left-arrow'></img>
 							</Paper>
 						</Grid>
@@ -482,7 +509,13 @@ const AboutUsMain = () => {
 							<Paper className={classes.b5} onClick={() => scroll2(-1)}>
 								<img src={LeftArrowIcon} alt='left-arrow'></img>
 							</Paper>
-							<Paper className={classes.b5} onClick={() => scroll2(+1)}>
+							<Paper
+								className={classes.b5}
+								onClick={() => scroll2(+1)}
+								style={{
+									background:
+										'linear-gradient(129.01deg, #4844FF 0%, #C961FA 91.5%)',
+								}}>
 								<img src={RightArrowBlueIcon} alt='left-arrow'></img>
 							</Paper>
 						</Grid>

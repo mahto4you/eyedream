@@ -146,7 +146,13 @@ const Blog = () => {
 							<Paper className={classes.b5} onClick={() => scrol(-1)}>
 								<img src={LeftArrowIcon} alt='left-arrow'></img>
 							</Paper>
-							<Paper className={classes.b5} onClick={() => scrol(+1)}>
+							<Paper
+								className={classes.b5}
+								onClick={() => scrol(+1)}
+								style={{
+									background:
+										'linear-gradient(129.01deg, #4844FF 0%, #C961FA 91.5%)',
+								}}>
 								<img src={RightArrowBlueIcon} alt='left-arrow'></img>
 							</Paper>
 						</Grid>

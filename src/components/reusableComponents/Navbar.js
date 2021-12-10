@@ -8,6 +8,8 @@ import {
 	Hidden,
 	Box,
 	Button,
+	useTheme,
+	useMediaQuery,
 } from '@material-ui/core';
 import TitleText from '../TitleText';
 import '../../components/Navbar.css';
@@ -75,6 +77,8 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = ({ active }) => {
 	const classes = useStyles();
 	const history = useHistory();
+	const theme = useTheme();
+	const matches = useMediaQuery(theme.breakpoints.down('sm'));
 	return (
 		<>
 			<Grid style={{ backgroundColor: 'white' }}>
@@ -111,109 +115,113 @@ const Navbar = ({ active }) => {
 							</Box>
 						</Grid>
 
-						<Grid className={classes.vd5} style={{ width: '80%' }}>
-							<Grid item>
-								<NavLink to='/' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: active == 1 ? '' : '#111341',
-											background:
-												active == 1
-													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-													: '',
-											webkitBackgroundClip: active == 1 ? 'text' : '',
-											WebkitTextFillColor: active == 1 ? 'transparent' : '',
-										}}>
-										Home
-									</TitleText>
-								</NavLink>
-							</Grid>
-							<Grid item>
-								<NavLink to='/product' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: active == 2 ? '' : '#111341',
-											background:
-												active == 2
-													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-													: '',
-											webkitBackgroundClip: active == 2 ? 'text' : '',
-											WebkitTextFillColor: active == 2 ? 'transparent' : '',
-										}}>
-										Product
-									</TitleText>
-								</NavLink>
-							</Grid>
-							<Grid item>
-								<NavLink to='/project' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: active == 3 ? '' : '#111341',
-											background:
-												active == 3
-													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-													: '',
-											webkitBackgroundClip: active == 3 ? 'text' : '',
-											WebkitTextFillColor: active == 3 ? 'transparent' : '',
-										}}>
-										Solution
-									</TitleText>
-								</NavLink>
-							</Grid>
-							<Grid item>
-								<NavLink to='/about' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: active == 4 ? '' : '#111341',
-											background:
-												active == 4
-													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-													: '',
-											webkitBackgroundClip: active == 4 ? 'text' : '',
-											WebkitTextFillColor: active == 4 ? 'transparent' : '',
-										}}>
-										Company
-									</TitleText>
-								</NavLink>
-							</Grid>
-							<Grid item>
-								<NavLink to='/publication' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: active == 5 ? '' : '#111341',
-											background:
-												active == 5
-													? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-													: '',
-											webkitBackgroundClip: active == 5 ? 'text' : '',
-											WebkitTextFillColor: active == 5 ? 'transparent' : '',
-										}}>
-										Publication
-									</TitleText>
-								</NavLink>
-							</Grid>
-							<Grid item>
-								<NavLink to='/company' className={classes.vd6}>
-									<TitleText
-										two
-										textStyle={{
-											color: '#111341',
-											// background:
-											// 	active == 6
-											// 		? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
-											// 		: '',
-											// webkitBackgroundClip: active == 6 ? 'text' : '',
-											// WebkitTextFillColor: active == 6 ? 'transparent' : '',
-										}}>
-										Contact Us
-									</TitleText>
-								</NavLink>
-							</Grid>
+						<Grid
+							className={classes.vd5}
+							style={{ width: matches ? '15%' : '80%' }}>
+							<Hidden only={['xs', 'sm']}>
+								<Grid item>
+									<NavLink to='/' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: active == 1 ? '' : '#111341',
+												background:
+													active == 1
+														? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+														: '',
+												webkitBackgroundClip: active == 1 ? 'text' : '',
+												WebkitTextFillColor: active == 1 ? 'transparent' : '',
+											}}>
+											Home
+										</TitleText>
+									</NavLink>
+								</Grid>
+								<Grid item>
+									<NavLink to='/product' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: active == 2 ? '' : '#111341',
+												background:
+													active == 2
+														? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+														: '',
+												webkitBackgroundClip: active == 2 ? 'text' : '',
+												WebkitTextFillColor: active == 2 ? 'transparent' : '',
+											}}>
+											Product
+										</TitleText>
+									</NavLink>
+								</Grid>
+								<Grid item>
+									<NavLink to='/project' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: active == 3 ? '' : '#111341',
+												background:
+													active == 3
+														? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+														: '',
+												webkitBackgroundClip: active == 3 ? 'text' : '',
+												WebkitTextFillColor: active == 3 ? 'transparent' : '',
+											}}>
+											Solution
+										</TitleText>
+									</NavLink>
+								</Grid>
+								<Grid item>
+									<NavLink to='/about' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: active == 4 ? '' : '#111341',
+												background:
+													active == 4
+														? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+														: '',
+												webkitBackgroundClip: active == 4 ? 'text' : '',
+												WebkitTextFillColor: active == 4 ? 'transparent' : '',
+											}}>
+											Company
+										</TitleText>
+									</NavLink>
+								</Grid>
+								<Grid item>
+									<NavLink to='/publication' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: active == 5 ? '' : '#111341',
+												background:
+													active == 5
+														? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+														: '',
+												webkitBackgroundClip: active == 5 ? 'text' : '',
+												WebkitTextFillColor: active == 5 ? 'transparent' : '',
+											}}>
+											Publication
+										</TitleText>
+									</NavLink>
+								</Grid>
+								<Grid item>
+									<NavLink to='/company' className={classes.vd6}>
+										<TitleText
+											two
+											textStyle={{
+												color: '#111341',
+												// background:
+												// 	active == 6
+												// 		? '-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)'
+												// 		: '',
+												// webkitBackgroundClip: active == 6 ? 'text' : '',
+												// WebkitTextFillColor: active == 6 ? 'transparent' : '',
+											}}>
+											Contact Us
+										</TitleText>
+									</NavLink>
+								</Grid>
+							</Hidden>
 							<Grid item>
 								<Button
 									className={classes.vd8}

@@ -467,8 +467,8 @@ const ProductMain = () => {
 					</Box>
 				</Grid>
 				<Grid item xs={6}>
-					<img src={Fore}></img>
-					<img src={WhoPic} style={{ marginTop: 250 }}></img>
+					<img src={Fore} width='100%'></img>
+					<img src={WhoPic} style={{ marginTop: 250 }} width='100%'></img>
 					{/* <img src={LinePic}></img> */}
 				</Grid>
 			</Grid>

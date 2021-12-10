@@ -22,7 +22,7 @@ const Main = () => {
 	return (
 		<>
 			<Grid container>
-				<Grid item xs={6} style={{ padding: 50 }}>
+				<Grid item xs={12} lg={6} style={{ padding: 50 }}>
 					<Box mt={'196px'}>
 						<TitleText
 							textStyle={{
@@ -60,7 +60,7 @@ const Main = () => {
 								Industries
 							</TitleText>
 							<Grid container spacing={6} style={{ marginTop: 64 }}>
-								<Grid item xs={6}>
+								<Grid item xs={12} md={6} lg={6}>
 									<Box
 										padding='6px 30px'
 										style={{
@@ -76,7 +76,7 @@ const Main = () => {
 										</BodyText>
 									</Box>
 								</Grid>
-								<Grid item xs={6}>
+								<Grid item xs={12} md={6} lg={6}>
 									<Box
 										padding='6px 30px'
 										style={{
@@ -94,7 +94,7 @@ const Main = () => {
 								</Grid>
 							</Grid>
 							<Grid container spacing={6}>
-								<Grid item xs={6}>
+								<Grid item xs={12} md={6} lg={6}>
 									<Box
 										padding='6px 30px'
 										style={{
@@ -110,7 +110,7 @@ const Main = () => {
 										</BodyText>
 									</Box>
 								</Grid>
-								<Grid item xs={6}>
+								<Grid item xs={12} md={6} lg={6}>
 									<Box
 										padding='6px 30px'
 										style={{
@@ -136,7 +136,7 @@ const Main = () => {
 						</Box>
 					</Box>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={12} lg={6}>
 					<Box
 						style={{
 							// border: '1px solid #060606',
@@ -204,7 +204,7 @@ const Main = () => {
 					marginTop: 57,
 				}}
 				spacing={6}>
-				<Grid item xs={4}>
+				<Grid item xs={12} md={6} lg={4}>
 					<Box
 						padding='28px 26px'
 						display='flex'
@@ -221,7 +221,7 @@ const Main = () => {
 						<img src={Robot} style={{ marginLeft: 10 }}></img>
 					</Box>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} md={6} lg={4}>
 					<Box
 						padding='28px 26px'
 						display='flex'
@@ -238,7 +238,7 @@ const Main = () => {
 						<img src={Robot} style={{ marginLeft: 10 }}></img>
 					</Box>
 				</Grid>
-				<Grid item xs={4}>
+				<Grid item xs={12} md={6} lg={4}>
 					<Box
 						padding='28px 26px'
 						display='flex'
