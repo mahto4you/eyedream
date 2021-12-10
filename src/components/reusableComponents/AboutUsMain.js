@@ -348,7 +348,7 @@ const AboutUsMain = () => {
 					backgroundPosition: 'center',
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
-					height: 850,
+					height: 650,
 					backgroundColor: '#EAEAFF',
 
 					paddingLeft: 75,
