@@ -11,7 +11,7 @@ import TitleText from '../../components/TitleText';
 import BodyText from '../BodyText';
 import LineWhite from '../../assets/images/LineWhite.svg';
 import Spiral from '../../assets/images/Spiral.svg';
-import ProductImg from '../../assets/images/ProductImg.svg';
+import ProductImg from '../../assets/images/ProductImg.png';
 import EyeDreamApp from '../../assets/images/EyeDreamApp.svg';
 import LineBlack from '../../assets/images/LineBlack.svg';
 import Hospital from '../../assets/images/Hospital.svg';
@@ -19,6 +19,8 @@ import EyeWear from '../../assets/images/EyeWear.svg';
 import Data from '../../assets/images/Data.svg';
 import SpiralWho from '../../assets/images/SpiralWho.svg';
 import WhoPic from '../../assets/images/WhoPic.svg';
+import Robotics from '../../assets/images/Robotics.svg';
+
 import Fore from '../../assets/images/Fore.svg';
 import LineColor from '../../assets/images/LineColor.svg';
 import LinePic from '../../assets/images/LinePic.svg';

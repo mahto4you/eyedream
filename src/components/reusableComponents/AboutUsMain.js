@@ -231,14 +231,14 @@ const AboutUsMain = () => {
 						</BodyText>
 					</Box>
 				</Grid>
-				<Grid item xs={12} lg={4} style={{ padding: matches ? '30px' : '' }}>
+				<Grid item xs={12} lg={5} style={{ padding: matches ? '30px' : '' }}>
 					<Box mt={'30px'}>
 						<TitleText
 							textStyle={{
 								fontSize: 144,
 								fontFamily: 'Playfair Display',
 								background:
-									'-webkit-linear-gradient(180deg, rgba(17, 19, 65, 0.5) 16.3%, rgba(255, 255, 255, 0) 81.06%)',
+									'linear-gradient(180deg, rgba(17, 19, 65, 0.5) 16.3%, rgba(255, 255, 255, 0) 81.06%)',
 								webkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}>
@@ -261,7 +261,7 @@ const AboutUsMain = () => {
 								fontSize: 144,
 								fontFamily: 'Playfair Display',
 								background:
-									'-webkit-linear-gradient(180deg, rgba(17, 19, 65, 0.5) 16.3%, rgba(255, 255, 255, 0) 81.06%)',
+									'linear-gradient(180deg, rgba(17, 19, 65, 0.5) 16.3%, rgba(255, 255, 255, 0) 81.06%)',
 								webkitBackgroundClip: 'text',
 								WebkitTextFillColor: 'transparent',
 							}}>
@@ -279,7 +279,7 @@ const AboutUsMain = () => {
 						</Box>
 					</Box>
 				</Grid>
-				<Grid item xs={2}></Grid>
+				<Grid item xs={1}></Grid>
 			</Grid>
 			<Grid
 				className={classes.b1}

@@ -52,7 +52,7 @@ const Main = () => {
 								textAlign: 'center',
 								borderRadius: 12,
 							}}>
-							<BodyText>Learn More</BodyText>
+							<BodyText textStyle={{ color: 'white' }}>Learn More</BodyText>
 						</Box>
 						<Box mt={'89px'}>
 							<TitleText
@@ -66,12 +66,26 @@ const Main = () => {
 										style={{
 											boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 											borderRadius: 12,
+											overflow: 'hidden',
 										}}>
 										<img src={Health} style={{ marginTop: 30 }}></img>
-										<TitleText two textStyle={{ marginTop: 10 }}>
+										<TitleText
+											two
+											textStyle={{
+												marginTop: 10,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Health Insurance Providers
 										</TitleText>
-										<BodyText textStyle={{ marginBottom: 50 }}>
+										<BodyText
+											textStyle={{
+												marginBottom: 50,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Data, Cost and Convinience
 										</BodyText>
 									</Box>
@@ -82,12 +96,26 @@ const Main = () => {
 										style={{
 											boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 											borderRadius: 12,
+											overflow: 'hidden',
 										}}>
 										<img src={gov} style={{ marginTop: 30 }}></img>
-										<TitleText two textStyle={{ marginTop: 10 }}>
+										<TitleText
+											two
+											textStyle={{
+												marginTop: 10,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Government and Defence
 										</TitleText>
-										<BodyText textStyle={{ marginBottom: 50 }}>
+										<BodyText
+											textStyle={{
+												marginBottom: 50,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Data, Cost and Convinience
 										</BodyText>
 									</Box>
@@ -100,12 +128,26 @@ const Main = () => {
 										style={{
 											boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 											borderRadius: 12,
+											overflow: 'hidden',
 										}}>
 										<img src={industry} style={{ marginTop: 30 }}></img>
-										<TitleText two textStyle={{ marginTop: 10 }}>
+										<TitleText
+											two
+											textStyle={{
+												marginTop: 10,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Industry Partners
 										</TitleText>
-										<BodyText textStyle={{ marginBottom: 50 }}>
+										<BodyText
+											textStyle={{
+												marginBottom: 50,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Hospitals, Clinicians and Opthomologists
 										</BodyText>
 									</Box>
@@ -116,6 +158,7 @@ const Main = () => {
 										style={{
 											boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
 											borderRadius: 12,
+											overflow: 'hidden',
 										}}>
 										<Box display='flex'>
 											<img src={search} style={{ marginTop: 30 }}></img>
@@ -123,11 +166,24 @@ const Main = () => {
 												src={research}
 												style={{ marginTop: 30, marginLeft: 30 }}></img>
 										</Box>
-										<TitleText two textStyle={{ marginTop: 10 }}>
+										<TitleText
+											two
+											textStyle={{
+												marginTop: 10,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											{' '}
 											Research Partners
 										</TitleText>
-										<BodyText textStyle={{ marginBottom: 50 }}>
+										<BodyText
+											textStyle={{
+												marginBottom: 50,
+												overflow: 'hidden',
+												whiteSpace: 'nowrap',
+												textOverflow: 'ellipsis',
+											}}>
 											Academic and Medical Research collobrations
 										</BodyText>
 									</Box>
