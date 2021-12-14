@@ -369,7 +369,10 @@ const AboutUsMain = () => {
 								<img src={LineColor}></img>
 							</Box>
 							<Box mt={'80px'}>
-								<BodyText textStyle={{ marginTop: 15 }}>
+								<BodyText
+									textStyle={{
+										marginTop: 15,
+									}}>
 									Our eCommerce section allows consumers control over their
 									selection while having a mirror vision of them, wearing the
 									different products. Due to our unique frame invention, the
@@ -571,7 +574,15 @@ const AboutUsMain = () => {
 								</Box>
 								<img src={LineBlack}></img>
 							</Box>
-							<BodyText textStyle={{ marginTop: 10 }}>
+							<BodyText
+								textStyle={{
+									marginTop: 10,
+									display: '-webkit-box',
+									WebkitLineClamp: 4,
+									WebkitBoxOrient: 'vertical',
+									textOverflow: 'ellipsis',
+									overflow: 'hidden',
+								}}>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
 								hac felis lectus neque, pellentesque vestibulum ullamcorper
 								lacus, pharetra. Orci nec turpis enim pretium, massa. Sed turpis
@@ -623,7 +634,15 @@ const AboutUsMain = () => {
 								</Box>
 								<img src={LineBlack}></img>
 							</Box>
-							<BodyText textStyle={{ marginTop: 10 }}>
+							<BodyText
+								textStyle={{
+									marginTop: 10,
+									display: '-webkit-box',
+									WebkitLineClamp: 4,
+									WebkitBoxOrient: 'vertical',
+									textOverflow: 'ellipsis',
+									overflow: 'hidden',
+								}}>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
 								hac felis lectus neque, pellentesque vestibulum ullamcorper
 								lacus, pharetra. Orci nec turpis enim pretium, massa. Sed turpis
@@ -675,7 +694,15 @@ const AboutUsMain = () => {
 								</Box>
 								<img src={LineBlack}></img>
 							</Box>
-							<BodyText textStyle={{ marginTop: 10 }}>
+							<BodyText
+								textStyle={{
+									marginTop: 10,
+									display: '-webkit-box',
+									WebkitLineClamp: 4,
+									WebkitBoxOrient: 'vertical',
+									textOverflow: 'ellipsis',
+									overflow: 'hidden',
+								}}>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales
 								hac felis lectus neque, pellentesque vestibulum ullamcorper
 								lacus, pharetra. Orci nec turpis enim pretium, massa. Sed turpis

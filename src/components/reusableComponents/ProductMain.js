@@ -21,7 +21,8 @@ import SpiralWho from '../../assets/images/SpiralWho.svg';
 import WhoPic from '../../assets/images/WhoPic.svg';
 import Robotics from '../../assets/images/Robotics.svg';
 
-import Fore from '../../assets/images/Fore.svg';
+import Fore from '../../assets/images/Fore.png';
+import AI from '../../assets/images/AI.png';
 import LineColor from '../../assets/images/LineColor.svg';
 import LinePic from '../../assets/images/LinePic.svg';
 import Blog from '../Blog';
@@ -339,18 +340,17 @@ const ProductMain = () => {
 			</Grid>
 			<Grid
 				container
-				spacing={2}
+				spacing={4}
 				style={{
 					paddingLeft: 75,
 					paddingRight: 75,
 					background: `url(${SpiralWho})`,
-					// justifyContent: 'center',
 					backgroundPosition: 'center',
 					backgroundSize: 'cover',
 					backgroundRepeat: 'no-repeat',
-					// height: 814,
 					marginTop: 80,
 					width: '100%',
+					// marginBottom: 200,
 				}}>
 				<Grid item xs={6}>
 					<Box>
@@ -405,14 +405,10 @@ const ProductMain = () => {
 							lectus nisl rhoncus in mi consectetur sagittis a, eget.
 						</BodyText>
 					</Box>
-					<Box mt={'20px'}>
+					<Box mt={'20px'} mb={'150px'}>
 						<Box display='flex'>
 							<TitleText
 								textStyle={{
-									// background:
-									// 	'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
-									// webkitBackgroundClip: 'text',
-									// WebkitTextFillColor: 'transparent',
 									fontFamily: 'Playfair Display',
 									color: 'black',
 									fontSize: 36,
@@ -423,10 +419,6 @@ const ProductMain = () => {
 								<img src={LineBlack}></img>
 								<TitleText
 									textStyle={{
-										// background:
-										// 	'-webkit-linear-gradient(90.73deg, #4844FF 6.71%, #C961FA 92.51%)',
-										// webkitBackgroundClip: 'text',
-										// WebkitTextFillColor: 'transparent',
 										marginLeft: 5,
 										fontFamily: 'Playfair Display',
 										fontSize: 24,
@@ -436,6 +428,28 @@ const ProductMain = () => {
 							</Box>
 						</Box>
 					</Box>
+				</Grid>
+				<Grid item xs={6}>
+					<Box
+						style={{
+							background: `url(${Fore})`,
+							backgroundPosition: 'center',
+							backgroundSize: 'cover',
+							backgroundRepeat: 'no-repeat',
+							marginTop: 120,
+							marginLeft: 20,
+						}}>
+						<Box>
+							<img
+								src={AI}
+								width='100%'
+								style={{ marginLeft: '-63px', marginTop: '-85px' }}></img>
+						</Box>
+					</Box>
+				</Grid>
+			</Grid>
+			<Grid container style={{ paddingLeft: 75, paddingRight: 75 }}>
+				<Grid item xs={6}>
 					<Box mt={'154px'}>
 						<TitleText
 							textStyle={{
@@ -452,9 +466,6 @@ const ProductMain = () => {
 							venenatis libero tellus neque.
 						</BodyText>
 					</Box>
-					{/* Trachoma (2 million) Unaddressed presbyopia(826 million) Unaddressed
-					reefractive error(123.7 million) Cataracyt (65.2 milllion) Glaucoma
-					(6.9 million) */}
 					<Box ml={'110px'} mt={'120px'}>
 						<ul tyle='circle' style={{ fontSize: 20, lineHeight: '36px' }}>
 							<li>Corneal opaciies(4.2 million)</li>
@@ -469,12 +480,9 @@ const ProductMain = () => {
 					</Box>
 				</Grid>
 				<Grid item xs={6}>
-					<img src={Fore} width='100%'></img>
 					<img src={WhoPic} style={{ marginTop: 250 }} width='100%'></img>
-					{/* <img src={LinePic}></img> */}
 				</Grid>
 			</Grid>
-
 			<BlogProduct />
 		</>
 	);
